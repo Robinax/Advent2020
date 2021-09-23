@@ -204,18 +204,18 @@ public class Main {
 
 
         int sumiyz = 0;
-        for (int i = 0; i < number.length; i++) {
-            int sum = number[i] + number[0] + number[0];
-            for (int y = 0; y < number.length; y++) {
+        for (int j : number) {
+            int sum = j + number[0] + number[0];
+            for (int i : number) {
                 if (sumiyz == 2020) {
                     break;
                 }
-                int sumiy = number[i] + number[y] + number[0];
-                for (int z = 0; z < number.length; z++) {
-                    sumiyz = number[i] + number[y] + number[z];
+                int sumiy = j + i + number[0];
+                for (int k : number) {
+                    sumiyz = j + i + k;
                     if (sumiyz == 2020) {
-                        System.out.println("I :" + number[i] + " Y :" + number[y] + " Z :" + number[z] + " Sum :" + sumiyz);
-                        int rightsum = number[i] * number[y] * +number[z];
+                        System.out.println("I :" + j + " Y :" + i + " Z :" + k + " Sum :" + sumiyz);
+                        int rightsum = j * i * k;
                         System.out.println(rightsum);
                         System.out.println("RIGHT!!");
 
